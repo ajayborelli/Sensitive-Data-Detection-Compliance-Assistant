@@ -2,22 +2,27 @@ from google import genai
 
 def generate_summary(text, api_key):
 
-    client = genai.Client(api_key=api_key)
+    try:
 
-    prompt = f"""
-    Analyze the following document and provide:
+        client = genai.Client(api_key=api_key)
 
-    1. Compliance Observations
-    2. Security Risks
-    3. Suggested Remediation Steps
+        prompt = f"""
+        Analyze the following document and provide:
 
-    Document:
-    {text}
-    """
+        1. Compliance Observations
+        2. Security Risks
+        3. Suggested Remediation Steps
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash-lite",
-        contents=prompt
-    )
+        Document:
+        {text}
+        """
 
-    return response.text
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
+
+        return response.text
+
+    except Exception as e:
+        return f"Error generating summary: {str(e)}"

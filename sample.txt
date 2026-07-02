@@ -1,0 +1,21 @@
+Employee Name: Ajay Kumar
+
+Email: ajay.kumar@company.com
+
+Phone: 9876543210
+
+PAN: ABCDE1234F
+
+Aadhaar: 1234 5678 9012
+
+Credit Card: 4111 2233 5522 7896
+
+Employee ID → EMP10245
+
+Bank Account → 1234567890123456
+
+IFSC Code → HDFC0001234
+
+Password → Password: Welcome@123
+
+API Key → API Key: sk_test_123456789abcdef

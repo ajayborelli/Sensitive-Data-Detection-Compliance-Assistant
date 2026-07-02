@@ -1,9 +1,18 @@
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sensitive-data-detection-compliance-assistant-sjaps2en6a69qija.streamlit.app/)
+
 # Sensitive Data Detection & Compliance Assistant
 
 ## Overview
 Sensitive Data Detection & Compliance Assistant is an AI-powered application that helps identify sensitive information in uploaded documents, assess risk levels, generate compliance summaries, and answer questions about document content.
-
 The application supports multiple file formats and provides automated compliance insights using Google Gemini AI.
+
+### Live Application
+https://sensitive-data-detection-compliance-assistant-sjaps2en6a69qija.streamlit.app/
+
+### GitHub Repository
+https://github.com/ajayborelli/Sensitive-Data-Detection-Compliance-Assistant
+
+## Features
 
 ### Document Upload
 Supported file formats:
@@ -13,6 +22,7 @@ Supported file formats:
 
 ### Sensitive Data Detection
 The system detects:
+
 - Aadhaar Numbers
 - PAN Numbers
 - Email Addresses
@@ -23,21 +33,27 @@ The system detects:
 - IFSC Codes
 - Passwords
 - API Keys
+- Confidential Business Information
 
 ### Risk Classification
 Documents are classified into:
+
 - Low Risk
 - Medium Risk
 - High Risk
+
 Based on the quantity of sensitive information detected.
 
 ### AI Compliance Summary
 Using Google Gemini AI, the application generates:
+
 - Compliance Observations
 - Security Risks
+- Suggested Remediation Steps
 
 ### Question Answering
 Users can ask questions such as:
+
 - What sensitive data exists in the document?
 - How many email addresses are present?
 - How many employee IDs are present?
@@ -46,21 +62,21 @@ Users can ask questions such as:
 - Summarize this document.
 
 ## Architecture Overview
-
-User Uploads Document
-          │
+```text
 Streamlit Interface
-          │
+        │
+User Uploads Document
+        │
 Document Processing
-          │
+        │
 Sensitive Data Detection
-          │
+        │
 Risk Classification
-          │
+        │
 Gemini AI Compliance Summary
-          │
+        │
 Question Answering
-
+```
 ## AI/ML Approach Used
 
 ### Rule-Based Detection
@@ -79,15 +95,14 @@ Examples include:
 - API Key Detection
 
 ### Generative AI
-
 Google Gemini AI is used to generate:
+
 - Compliance Analysis
 - Security Risk Assessment
 - Remediation Recommendations
 - Document Summaries
 
 ## Technologies Used
-
 - Python
 - Streamlit
 - Pandas
@@ -101,7 +116,7 @@ Google Gemini AI is used to generate:
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ajayborelli/Sensitive-Data-Detection-Compliance-Assistant.git
 cd Sensitive-Data-Detection-Compliance-Assistant
 ```
 
@@ -124,10 +139,8 @@ GEMINI_API_KEY=YOUR_API_KEY
 ```bash
 python -m streamlit run app.py
 ```
-
----
-
 ## Challenges Faced
+
 - Handling multiple document formats.
 - Designing accurate Regex patterns for sensitive data.
 - Integrating Google Gemini AI.
@@ -145,6 +158,7 @@ python -m streamlit run app.py
 
 ## Project Structure
 
+```text
 Sensitive-Data-Detection-Compliance-Assistant
 │
 ├── app.py
@@ -154,7 +168,8 @@ Sensitive-Data-Detection-Compliance-Assistant
 ├── README.md
 ├── .gitignore
 └── .env
+```
 
-# Author
+## Author
 
 Ajay Kumar
